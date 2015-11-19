@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>GitHub</title>
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css" integrity="sha512-dTfge/zgoMYpP7QbHy4gWMEGsbsdZeCXz7irItjcC3sPUFtf0kuFbDz/ixG7ArTxmDjLXDmezHubeNikyKGVyQ==" crossorigin="anonymous">
+    <link rel="stylesheet" type="text/css" href="./css/main.css">
+
+</head>
+<body>
+    <nav class="navbar navbar-default navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle collapsed" data-toggle= "collapse" data-target="#navbar" aria-expanded= "false" aria-controls= "navbar">
+                    <span class= "sr-only">Toggle navigation</span>
+                    <span class= "icon-bar"></span>
+                    <span class= "icon-bar"></span>
+                    <span class= "icon-bar"></span>
+                    
+                </button>
+                <a class="navbar-brand" href= "#">GitHub</a>
+            </div>
+
+            <div id ="navbar" class="navbar-collapse collapse">
+                <ul class ="nav navbar-nav">
+                    <li class="active">
+                        <a href="#">Home</a>
+                    </li>
+                </ul>
+                <ul class="nav navbar-nav navbar-right">
+                    <li>
+                        <a href="./search.html">Buscar</a>
+                    </li>
+                    <li>
+                        <a href="./repositories.html">Repositorios</a>
+                    </li>
+                </ul>
+              
+            </div>
+        </div>
+    </nav>
+
+    <div id="main" class="container">
+        <div class="header">
+    <h3 class="text-muted prj-name">
+        <span class="fa fa-users fa-2x principal-title"></span>
+        Followers zone
+    </h3>
+  </div>
+
+
+  <div class="jumbotron list-content">
+  <h4>Mis followers</h4>
+    <ul class="list-group" id="followers-list">
+    </ul>
+  </div>
+    </div>
+
+
+    <script src="https://code.jquery.com/jquery-2.1.4.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/js/bootstrap.min.js" integrity="sha512-K1qjQ+NcF2TYO/eI3M6v8EiNYZfA95pQumfvcVrTHtwQVDG+aHRqLi/ETn2uB+1JqwYqVG3LIvdm9lj6imS/pQ==" crossorigin="anonymous"></script>
+
+    <script src="./js/github-api.js"></script>
+    <script src="./js/index.js"></script>
+</body>
+</html>

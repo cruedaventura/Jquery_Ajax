@@ -1,0 +1,46 @@
+var API_BASE_URL = 'https://api.github.com';    
+var USERNAME = '';
+var PASSWORD = '';
+
+$.ajaxSetup({
+    headers: { 
+        'Authorization': 'Basic ' + btoa(USERNAME + ':' + PASSWORD)
+    }
+});
+
+function getFollowers(callback) {
+    $.getJSON(API_BASE_URL + '/user/followers', callback);
+}
+
+
+function follow(username) {
+    $.ajax({
+    type: 'PUT', // Use POST with X-HTTP-Method-Override or a straight PUT if appropriate.
+    url: API_BASE_URL + '/user/following/' + username, // A valid URL
+});
+}
+
+function unfollow(username) {
+    $.ajax({
+    url: API_BASE_URL + '/user/following/' + username,
+    type: 'DELETE',
+});
+}
+
+function search(username, callback){
+     $.getJSON(API_BASE_URL + '/search/users?q='+ username + '&per_page=5', callback);
+}
+
+function searchPaginated(url, callback){
+     $.getJSON(url, callback);
+}
+
+function createRepo(repository){
+    $.ajax({
+        url : API_BASE_URL + '/user/repos',
+        type : 'POST',
+        crossDomain : true,
+        dataType : 'json',
+        data : JSON.stringify(repository),
+    });
+}

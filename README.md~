@@ -1,0 +1,8 @@
+#Jquery_ajax
+En este projecto, he utilizado la api de Github
+funciones:
+	-Listar followers
+	-Seguir a alguien
+	-Dejar de seguir
+	-Buscar usuarios y paginar
+	-Crear repositorios
